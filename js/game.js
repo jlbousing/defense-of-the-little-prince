@@ -59,7 +59,7 @@ var gameState = {
         
         txtNivel = game.add.text(325, 16, 'Level: 1', {font: '24px Arial', fill: '#ffffff'});
 
-         game.time.events.loop(rangoTiempo, soltarDiamante,this);
+         game.time.events.loop(rangoTiempo, soltarMeteoro,this);
         
         
          audio = game.add.audio("LukeLake");
@@ -78,10 +78,10 @@ var gameState = {
         
         
         
-        //SE AÑADE UN COLLIDER ENTRE LA BANDEJA Y LOS DIAMANTES, Y SE DISPARA UNA FUNCIÓN
+        //SE AÑADE UN COLLIDER ENTRE LA BANDEJA Y LOS METEOROS, Y SE DISPARA UNA FUNCIÓN
         game.physics.arcade.overlap(bandeja, meteoros, atajar, null, this);
         
-        //SE AÑADE UN COLLIDER ENTRE EL SUELO Y LOS DIAMANTES, Y SE DISPARA UNA FUNCIÓN
+        //SE AÑADE UN COLLIDER ENTRE EL SUELO Y LOS METEOROS, Y SE DISPARA UNA FUNCIÓN
         game.physics.arcade.overlap(meteoros, suelo, perderVida, null, this);     
     },
     
@@ -89,7 +89,7 @@ var gameState = {
     
 };
 
-  var soltarDiamante = function(){
+  var soltarMeteoro = function(){
       
         
         var meteorito = meteoros.create(posicion, 100, 'meteoro'); //SE CREA UN DIAMANTE
