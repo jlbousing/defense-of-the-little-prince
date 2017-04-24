@@ -48,7 +48,7 @@ var gameState = {
         //FUNCIÓN PARA SUBIR DE NIVEL
         game.subirNivel = game.time.events.loop(10000, subirNivel, this); //manejo de tiempo
         
-        //SE CREA UN GRUPO DE DIAMANTES
+        //SE CREA UN GRUPO DE METEOROS
         meteoros = game.add.group();
         
         //SE AÑADE EL TEXTO DEL PUNTAJE
@@ -92,11 +92,11 @@ var gameState = {
   var soltarMeteoro = function(){
       
         
-        var meteorito = meteoros.create(posicion, 100, 'meteoro'); //SE CREA UN DIAMANTE
-        game.physics.arcade.enable(meteorito); //SE LE DA FÍSICA AL DIAMANTE
+        var meteorito = meteoros.create(posicion, 100, 'meteoro'); //SE CREA UN METEORO
+        game.physics.arcade.enable(meteorito); //SE LE DA FÍSICA AL METEORO
         fx.volume = 0.3;
         fx.play();
-        meteorito.body.gravity.y = game.gravedad; //SE LE ASIGNA LA GRAVEDAD AL DIAMANTE
+        meteorito.body.gravity.y = game.gravedad; //SE LE ASIGNA LA GRAVEDAD AL METEORO
         
     }
   
