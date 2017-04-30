@@ -106,8 +106,8 @@ var gameState = {
       txtPuntaje.setText('Score: '+game.puntaje);
   }
   
-  var perderVida = function(suelo,diamante){
-      diamante.kill();
+  var perderVida = function(suelo,meteorito){
+      meteorito.kill();
       game.vidas -= 1;
       txtVidas.setText("Lifes: "+game.vidas);
       
